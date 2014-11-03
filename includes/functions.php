@@ -22,6 +22,25 @@ function example_options( $id = false ) {
     
 }
 
+function shortcode( $atts ) {
+	extract( shortcode_atts( array(
+		'id' => 0,
+	), $atts ) );
+
+	$options = example_options( $id );
+
+	return vb_render_view( $id );
+}
+add_shortcode( 'display_shortcode', 'shortcode' );
+
+
+/* returns shorcode */
+function render_view( $id ) {
+
+	return 'shortcode output';
+
+}
+
 
 /* How to get the custom post type id? */
 
