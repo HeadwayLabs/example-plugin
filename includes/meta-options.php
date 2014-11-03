@@ -10,15 +10,21 @@
 //this sections shows how you can section tabs feature and use the group field to nest and repeat fields, it can go as deep as you want it to (consider the implications on screen space though)
 $sections['group'] = array(
     'dash_icon' => 'feedback',
-    'title' => __('Example Meta', 'fluent'),
+    'title' => __('Layout Select', 'fluent'),
     'description' => '',
     'context' => 'normal',
     'priority' => 'high',
     'fields' => array(
         //this is where the sorter must be added
         'example' => array(
-            'type'  => 'text',//sorter
-            'title' => 'Example Meta Field'
+            'type'  => 'select',//sorter
+            'title' => 'Select a layout',
+            'options' => array(
+                'layout1' => 'Layout 1',
+                'layout2' => 'Layout 2',
+                'layout3' => 'Layout 3',
+                'layout4' => 'Layout 4'
+            )
         )
     ),
 );
