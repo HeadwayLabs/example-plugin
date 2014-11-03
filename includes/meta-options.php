@@ -16,7 +16,7 @@ $sections['group'] = array(
     'priority' => 'high',
     'fields' => array(
         //this is where the sorter must be added
-        'example' => array(
+        'layout' => array(
             'type'  => 'select',//sorter
             'title' => 'Select a layout',
             'options' => array(

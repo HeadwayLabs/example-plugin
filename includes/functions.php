@@ -30,3 +30,16 @@ $id = example_plugin()->id;
 /* Then I can call the options like this */
 
 $options = get_post_meta( $id, 'custom_pt_options', true );
+
+
+/* Example of how I would enqueue the script if I could get the ID and options */
+
+function enqueue_scripts() {
+
+	wp_enqueue_script('layout1', example_plugin()->plugin_url . 'includes/assets/layouts/js/layout1.js', array(), example_plugin()->version, 1);
+}
+
+if ($options['layout'] == 'layout1') {
+	add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
+}
+
