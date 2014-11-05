@@ -137,6 +137,13 @@ if ( ! class_exists( 'Example_Plugin' ) ) :
 			    'assets_path' => $this->plugin_dir . '/includes/fluent-custom/assets/fields/raw/'
 			));
 
+			Fluent_Options::register_field_type(array(
+			    'type' => 'sorter',
+			    'class_name' => 'Fluent_Sorter_Field',
+			    'path' => $this->plugin_dir . '/includes/fluent-custom/classes/fields/class.fluent-sorter-field.php',
+			    'assets_path' => $this->plugin_dir . '/includes/fluent-custom/assets/fields/sorter/'
+			));
+
 			require_once( $this->plugin_dir .'includes/meta-options.php' );
 
 		}
