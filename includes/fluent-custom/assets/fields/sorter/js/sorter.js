@@ -6,7 +6,7 @@
     
     $.fluent = $.fluent || {};
     
-    $.fluent.raw = {
+    $.fluent.sorter = {
         
         $el: null,
         
@@ -19,7 +19,7 @@
             if($.fluent.is_clone_field(this.$el)){
                 return false;
             }
-            $(this.$el).attr('colspan', 2).addClass('raw-type-'+$(this.$el).find('div[data-raw-type]').data('raw-type'));
+            $(this.$el).attr('colspan', 2).addClass('sorter-type-'+$(this.$el).find('div[data-sorter-type]').data('sorter-type'));
             if(fluent.context != 'user'){
                 //meta boxes
                 $(this.$el).closest('tr').find('td.label').hide();
@@ -31,14 +31,14 @@
     };
     
     $(document).on('fluent/create_fields', function(e, el){
-		$(el).find('.field-type-raw').each(function(){
-            $.fluent.raw.set({ $el : $(this) }).init();
+		$(el).find('.field-type-sorter').each(function(){
+            $.fluent.sorter.set({ $el : $(this) }).init();
 		});
 	});
     
     //we must fire it here even though it duplicates it
-    $('.wrap').find('.field-type-raw').each(function(){
-        $.fluent.raw.set({ $el : $(this) }).init();
+    $('.wrap').find('.field-type-sorter').each(function(){
+        $.fluent.sorter.set({ $el : $(this) }).init();
     });
     
 })(jQuery);

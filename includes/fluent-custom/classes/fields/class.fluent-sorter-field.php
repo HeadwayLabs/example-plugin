@@ -1,18 +1,18 @@
 <?php
 /**
- * Fluent_Raw_Field
+ * Fluent_Sorter_Field
  *
  * @package Fluent
  * @since 1.0.0
  * @version 1.0.0
  */
 
-add_action('fluent/options/field/raw/render', array('Fluent_Raw_Field', 'render'), 1, 2);
+add_action('fluent/options/field/sorter/render', array('Fluent_Sorter_Field', 'render'), 1, 2);
 
 /**
- * Fluent_Raw_Field simple text field.
+ * Fluent_Sorter_Field simple text field.
  */
-class Fluent_Raw_Field extends Fluent_Field{
+class Fluent_Sorter_Field extends Fluent_Field{
     
     /**
      * Returns the default field data.
