@@ -130,6 +130,13 @@ if ( ! class_exists( 'Example_Plugin' ) ) :
 			/* Include Fluent and Custom meta and post type */
 			require_once( $this->plugin_dir . 'includes/fluent-framework/fluent-framework.php' );
 
+			Fluent_Options::register_field_type(array(
+			    'type' => 'raw',
+			    'class_name' => 'Fluent_Raw_Field',
+			    'path' => $this->plugin_dir . '/includes/fluent-custom/classes/fields/class.fluent-raw-field.php',
+			    'assets_path' => $this->plugin_dir . '/includes/fluent-custom/assets/fields/raw/'
+			));
+
 			require_once( $this->plugin_dir .'includes/meta-options.php' );
 
 		}

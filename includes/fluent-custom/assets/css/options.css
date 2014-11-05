@@ -1,0 +1,26 @@
+#content-preview .hndle {
+	text-align: center;
+	font-weight: normal;
+	padding: 16px 0;
+	background: #FAFAFA;
+}
+
+#content-preview .handlediv {
+	display: none;
+}
+
+#content-preview .hndle h1 {
+	color: #5F5F5F;
+	display: block;
+	font-size: 19px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#content-preview .hndle span p {
+	display: block;
+	font-size: 11px;
+	color: #999;
+	margin: 0;
+}
